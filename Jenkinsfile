@@ -3,13 +3,14 @@ pipeline {
     node {
       label 'nodejs-app'
     }
-
   }
   stages {
     stage('Build') {
       steps {
-        echo 'Hello world from Build stage using a Message step'
-        sh 'java -version'
+        container('nodejs') {
+          echo 'Hello world from Build stage using a Message step'
+          sh 'java -version'
+        }
       }
     }
     stage('Test') {
