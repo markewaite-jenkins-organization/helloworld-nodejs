@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Build Message'
+        echo 'Hello world from Build stage using a Message step'
         sh 'java -version'
       }
     }
