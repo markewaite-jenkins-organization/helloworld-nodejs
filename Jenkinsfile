@@ -14,7 +14,7 @@ pipeline {
         checkout scm
         container('nodejs') {
           echo 'Hello world from Build stage using a Message step'
-          sh 'node -version'
+          sh 'node --version'
         }
       }
     }
