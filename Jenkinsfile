@@ -9,7 +9,7 @@ pipeline {
       steps {
         container('nodejs') {
           echo 'Hello world from Build stage using a Message step'
-          sh 'java -version'
+          sh 'npm -version'
         }
       }
     }
