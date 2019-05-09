@@ -4,6 +4,9 @@ pipeline {
       label 'nodejs-app'
     }
   }
+  triggers {
+    eventTrigger simpleMatch('hello-api-deploy-event')
+  }
   options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
     skipDefaultCheckout true
